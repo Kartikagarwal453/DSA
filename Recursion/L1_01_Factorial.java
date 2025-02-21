@@ -1,6 +1,6 @@
 // Factorial of n .
 
-public class Factorial {
+public class L1_Factorial {
     public static void main(String[] args) {
         System.out.println(fact(6));
     }

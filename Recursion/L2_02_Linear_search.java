@@ -1,6 +1,7 @@
 // To find an element in an array .
 // find() -> to find if an element exist in an array or not .
 // findindex() -> to find the index of an element in an array .
+// findindexLast -> find the index of the element from the last .
 
 public class L2_02_Linear_search {
     public static void main(String[] args) {
@@ -8,6 +9,7 @@ public class L2_02_Linear_search {
         int target = 65;
         System.out.println(find(arr,target,0));
         System.out.println(findindex(arr,target,0));
+        System.out.println(findindexLast(arr,target, arr.length-1));
     }
     static boolean find(int[] arr , int target , int index){
         if(index== arr.length){
@@ -24,6 +26,17 @@ public class L2_02_Linear_search {
         }
         else {
             return findindex(arr, target, index+1);
+        }
+    }
+    static int findindexLast(int[] arr , int target , int index){
+        if(index == -1){
+            return -1;
+        }
+        if(arr[index] == target){
+            return index;
+        }
+        else {
+            return findindexLast(arr, target, index-1);
         }
     }
 }
